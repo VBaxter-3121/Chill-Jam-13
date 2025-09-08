@@ -5,6 +5,15 @@ using UnityEngine.InputSystem;
 
 public class CactusControl : MonoBehaviour
 {
+    [SerializeField] private Rigidbody2D rb;
+    [SerializeField] private float moveSpeed;
+
+    private Vector2 moveDirection;
+
+    private void FixedUpdate()
+    {
+        rb.AddForce(moveDirection * moveSpeed);
+    }
 
     public void RetractSpines(InputAction.CallbackContext context)
     {
@@ -16,5 +25,10 @@ public class CactusControl : MonoBehaviour
         {
             this.GetComponent<Spines>().Extend();
         }
+    }
+
+    public void Roll(InputAction.CallbackContext context)
+    {
+        moveDirection = context.ReadValue<Vector2>();
     }
 }
