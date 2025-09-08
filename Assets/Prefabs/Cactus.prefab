@@ -78,7 +78,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: -2413806693520163455, guid: a86470a33a6bf42c4b3595704624658b, type: 3}
+  m_Sprite: {fileID: 2747690628134850419, guid: a9716c16a44a94eed9b5c90fbf4d9bdd, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -177,7 +177,19 @@ MonoBehaviour:
       m_Calls: []
   m_ActionEvents:
   - m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 2827658751738811959}
+        m_TargetAssemblyTypeName: CactusControl, Assembly-CSharp
+        m_MethodName: Roll
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
     m_ActionId: be3c8e8d-be49-4604-b083-68cb116e563a
     m_ActionName: Player/Move[/Keyboard/w,/Keyboard/upArrow,/Keyboard/s,/Keyboard/downArrow,/Keyboard/a,/Keyboard/leftArrow,/Keyboard/d,/Keyboard/rightArrow]
   - m_PersistentCalls:
@@ -253,6 +265,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1dac4c17a4b50d946a6a39f8d155ffd1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  rb: {fileID: 6485387896217789020}
+  moveSpeed: 10
 --- !u!114 &4581220399504213846
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -265,6 +279,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2dbaa8eba3496c84897d0e0545884f80, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  limitUpper: 1.5
-  limitLower: 1
-  spineSpeed: 10
+  limitUpper: {x: 1.5, y: 1.5}
+  limitLower: {x: 1, y: 1}
+  spineSpeed: 1

@@ -230,14 +230,6 @@ PrefabInstance:
       propertyPath: m_Sprite
       value: 
       objectReference: {fileID: 21300000, guid: 395f6b9556f14704790df6035be6ee3a, type: 3}
-    - target: {fileID: 2827658751738811959, guid: 69e88713067d08147ad1a39c5f62e73c, type: 3}
-      propertyPath: rb
-      value: 
-      objectReference: {fileID: 1898774735}
-    - target: {fileID: 2827658751738811959, guid: 69e88713067d08147ad1a39c5f62e73c, type: 3}
-      propertyPath: moveSpeed
-      value: 2
-      objectReference: {fileID: 0}
     - target: {fileID: 4581220399504213846, guid: 69e88713067d08147ad1a39c5f62e73c, type: 3}
       propertyPath: spineSpeed
       value: 1
@@ -257,10 +249,6 @@ PrefabInstance:
     - target: {fileID: 4581220399504213846, guid: 69e88713067d08147ad1a39c5f62e73c, type: 3}
       propertyPath: limitUpper.y
       value: 1.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 6485387896217789020, guid: 69e88713067d08147ad1a39c5f62e73c, type: 3}
-      propertyPath: m_AngularDrag
-      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 6599394379191568331, guid: 69e88713067d08147ad1a39c5f62e73c, type: 3}
       propertyPath: m_ActionEvents.Array.data[0].m_PersistentCalls.m_Calls.Array.size
@@ -504,11 +492,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1dac4c17a4b50d946a6a39f8d155ffd1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!50 &1898774735 stripped
-Rigidbody2D:
-  m_CorrespondingSourceObject: {fileID: 6485387896217789020, guid: 69e88713067d08147ad1a39c5f62e73c, type: 3}
-  m_PrefabInstance: {fileID: 737939840}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
