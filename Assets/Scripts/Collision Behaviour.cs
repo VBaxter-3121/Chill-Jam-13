@@ -14,11 +14,6 @@ public class CollisionBehaviour : MonoBehaviour
         spines = this.GetComponent<Spines>();
     }
 
-    private void Update()
-    {
-        Debug.Log(jumpDirection);
-    }
-
     private void OnCollisionEnter2D(Collision2D collision)
     {
         if (collision.transform.GetComponent<SurfaceProperties>().IsSoft())
