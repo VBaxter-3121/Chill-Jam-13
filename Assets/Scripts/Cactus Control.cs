@@ -7,6 +7,7 @@ public class CactusControl : MonoBehaviour
 {
     [SerializeField] private Rigidbody2D rb;
     [SerializeField] private float moveSpeed;
+    [SerializeField] private float jumpStrength;
 
     private Vector2 moveDirection;
 
@@ -24,6 +25,7 @@ public class CactusControl : MonoBehaviour
         else if (context.canceled)
         {
             this.GetComponent<Spines>().Extend();
+            rb.AddForce(this.GetComponent<CollisionBehaviour>().GetJumpDirection() * jumpStrength);
         }
     }
 
