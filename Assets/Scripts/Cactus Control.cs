@@ -10,6 +10,12 @@ public class CactusControl : MonoBehaviour
     [SerializeField] private float jumpStrength;
 
     private Vector2 moveDirection;
+    private float baseSpeed;
+
+    private void Start()
+    {
+        baseSpeed = moveSpeed;
+    }
 
     private void FixedUpdate()
     {
@@ -21,6 +27,7 @@ public class CactusControl : MonoBehaviour
         if (context.started)
         {
             this.GetComponent<Spines>().Retract();
+            this.GetComponent<CollisionBehaviour>().Release();
         }
         else if (context.canceled)
         {
@@ -32,5 +39,19 @@ public class CactusControl : MonoBehaviour
     public void Roll(InputAction.CallbackContext context)
     {
         moveDirection = context.ReadValue<Vector2>();
+    }
+
+    public void ToggleSpeed(bool isFree)
+    {
+        if (!isFree)
+        {
+            moveSpeed = baseSpeed * 0.5f;
+            rb.gravityScale = 0.25f;
+        }
+        else
+        {
+            moveSpeed = baseSpeed;
+            rb.gravityScale = 1;
+        }
     }
 }

@@ -1,17 +1,34 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.Mathematics;
 using Unity.VisualScripting;
 using UnityEngine;
+using UnityEngine.Splines;
 
 public class CollisionBehaviour : MonoBehaviour
 {
     private Spines spines;
     private Vector2 jumpDirection;
+    public SplineContainer splineContainer;
+    private bool freeMovement;
 
     // Start is called before the first frame update
     void Start()
     {
         spines = this.GetComponent<Spines>();
+        freeMovement = true;
+    }
+
+    private void Update()
+    {
+        if (!freeMovement)
+        {
+            float3 nearestPoint;
+            float t;
+            SplineUtility.GetNearestPoint(splineContainer.Spline, transform.position, out nearestPoint, out t);
+            this.transform.position = nearestPoint;
+            //GetComponent<Rigidbody2D>().AddForce(GetComponent<Rigidbody2D>().velocity * -0.1f);
+        }
     }
 
     private void OnCollisionEnter2D(Collision2D collision)
@@ -22,6 +39,10 @@ public class CollisionBehaviour : MonoBehaviour
             if (spines.IsSpiney())
             {
                 Debug.Log("I can stick to this surface.");
+                splineContainer = collision.transform.GetComponent<SurfaceProperties>().GetSpline();
+                GetComponent<Rigidbody2D>().velocity = Vector2.zero;
+                freeMovement = false;
+                this.GetComponent<CactusControl>().ToggleSpeed(freeMovement);
             }
         }
         else
@@ -40,10 +61,30 @@ public class CollisionBehaviour : MonoBehaviour
         {
             jumpDirection = Vector2.zero;
         }
+
+        if (collision.transform.GetComponent<SurfaceProperties>().IsSoft() && spines.IsSpiney() && freeMovement)
+        {
+            splineContainer = collision.transform.GetComponent<SurfaceProperties>().GetSpline();
+            GetComponent<Rigidbody2D>().velocity = Vector2.zero;
+            freeMovement = false;
+            this.GetComponent<CactusControl>().ToggleSpeed(freeMovement);
+        }
     }
 
     public Vector2 GetJumpDirection()
     {
         return jumpDirection;
+    }
+
+    public void Release()
+    {
+        freeMovement = true;
+        this.GetComponent<CactusControl>().ToggleSpeed(freeMovement);
+        splineContainer = null;
+    }
+
+    public bool IsStuck()
+    {
+        return freeMovement;
     }
 }
