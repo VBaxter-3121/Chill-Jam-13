@@ -286,10 +286,10 @@ MonoBehaviour:
         z: 1.8000001
       Rotation:
         value:
-          x: 0.00000012458841
+          x: 0.00000012989793
           y: -0.70710677
           z: 0.70710677
-          w: 0.00000012458841
+          w: 0.00000012989793
     - Position:
         x: -3.75
         y: -13
@@ -304,10 +304,10 @@ MonoBehaviour:
         z: 1.8000001
       Rotation:
         value:
-          x: 0.000000025683242
+          x: 0.000000030786964
           y: -0.70710677
           z: 0.70710677
-          w: 0.000000025683242
+          w: 0.000000030786964
     m_MetaData:
     - Mode: 0
       Tension: 0.5
@@ -763,18 +763,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7318364775769662232, guid: a2a3e53a892f3364ebd51cb027de3aad, type: 3}
       propertyPath: spline.m_Knots.Array.data[1].Rotation.value.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 8750279045390405557, guid: a2a3e53a892f3364ebd51cb027de3aad, type: 3}
-      propertyPath: m_Color.b
-      value: 0.7311321
-      objectReference: {fileID: 0}
-    - target: {fileID: 8750279045390405557, guid: a2a3e53a892f3364ebd51cb027de3aad, type: 3}
-      propertyPath: m_Color.g
-      value: 0.9599334
-      objectReference: {fileID: 0}
-    - target: {fileID: 8750279045390405557, guid: a2a3e53a892f3364ebd51cb027de3aad, type: 3}
-      propertyPath: m_Color.r
       value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []

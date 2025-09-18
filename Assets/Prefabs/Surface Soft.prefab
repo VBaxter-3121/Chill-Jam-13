@@ -12,13 +12,17 @@ PrefabInstance:
       propertyPath: soft
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 1933639391697739444, guid: 164abb70fb8d82a4ba3f707b0c088191, type: 3}
+      propertyPath: m_Color.b
+      value: 0.7311321
+      objectReference: {fileID: 0}
+    - target: {fileID: 1933639391697739444, guid: 164abb70fb8d82a4ba3f707b0c088191, type: 3}
+      propertyPath: m_Color.g
+      value: 0.9599334
+      objectReference: {fileID: 0}
     - target: {fileID: 3379487690326237631, guid: 164abb70fb8d82a4ba3f707b0c088191, type: 3}
       propertyPath: m_Name
       value: Surface Soft
-      objectReference: {fileID: 0}
-    - target: {fileID: 4348862504244279115, guid: 164abb70fb8d82a4ba3f707b0c088191, type: 3}
-      propertyPath: m_LocalScale.x
-      value: 18
       objectReference: {fileID: 0}
     - target: {fileID: 4348862504244279115, guid: 164abb70fb8d82a4ba3f707b0c088191, type: 3}
       propertyPath: m_LocalPosition.x
@@ -26,7 +30,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4348862504244279115, guid: 164abb70fb8d82a4ba3f707b0c088191, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -3.79
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4348862504244279115, guid: 164abb70fb8d82a4ba3f707b0c088191, type: 3}
       propertyPath: m_LocalPosition.z

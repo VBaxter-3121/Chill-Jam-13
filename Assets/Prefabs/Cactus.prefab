@@ -268,6 +268,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   rb: {fileID: 6485387896217789020}
   moveSpeed: 10
+  jumpStrength: 300
 --- !u!114 &4581220399504213846
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -294,3 +295,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 55899465a424dbe4a84276296dcec438, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  splineContainer: {fileID: 0}

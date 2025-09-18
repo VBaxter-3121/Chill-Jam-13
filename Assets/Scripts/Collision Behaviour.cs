@@ -11,6 +11,8 @@ public class CollisionBehaviour : MonoBehaviour
     private Vector2 jumpDirection;
     public SplineContainer splineContainer;
     private bool freeMovement;
+    BezierKnot startKnot;
+    BezierKnot endKnot;
 
     // Start is called before the first frame update
     void Start()
@@ -27,6 +29,12 @@ public class CollisionBehaviour : MonoBehaviour
             float t;
             SplineUtility.GetNearestPoint(splineContainer.Spline, transform.position, out nearestPoint, out t);
             this.transform.position = nearestPoint;
+            if (this.transform.position == splineContainer.transform.TransformPoint(startKnot.Position) ||
+                this.transform.position == splineContainer.transform.TransformPoint(endKnot.Position))
+            {
+                this.GetComponent<Rigidbody2D>().velocity = Vector2.zero;
+            }
+
             //GetComponent<Rigidbody2D>().AddForce(GetComponent<Rigidbody2D>().velocity * -0.1f);
         }
     }
@@ -35,11 +43,13 @@ public class CollisionBehaviour : MonoBehaviour
     {
         if (collision.transform.GetComponent<SurfaceProperties>().IsSoft())
         {
-            Debug.Log("This surface is soft.");
+            //Debug.Log("This surface is soft.");
             if (spines.IsSpiney())
             {
-                Debug.Log("I can stick to this surface.");
+                //Debug.Log("I can stick to this surface.");
                 splineContainer = collision.transform.GetComponent<SurfaceProperties>().GetSpline();
+                startKnot = splineContainer.Spline[0];
+                endKnot = splineContainer.Spline[splineContainer.Spline.Count - 1];
                 GetComponent<Rigidbody2D>().velocity = Vector2.zero;
                 freeMovement = false;
                 this.GetComponent<CactusControl>().ToggleSpeed(freeMovement);
@@ -47,7 +57,7 @@ public class CollisionBehaviour : MonoBehaviour
         }
         else
         {
-            Debug.Log("This surface is hard.");
+            //Debug.Log("This surface is hard.");
         }
     }
 
@@ -65,6 +75,8 @@ public class CollisionBehaviour : MonoBehaviour
         if (collision.transform.GetComponent<SurfaceProperties>().IsSoft() && spines.IsSpiney() && freeMovement)
         {
             splineContainer = collision.transform.GetComponent<SurfaceProperties>().GetSpline();
+            startKnot = splineContainer.Spline[0];
+            endKnot = splineContainer.Spline[splineContainer.Spline.Count - 1];
             GetComponent<Rigidbody2D>().velocity = Vector2.zero;
             freeMovement = false;
             this.GetComponent<CactusControl>().ToggleSpeed(freeMovement);
