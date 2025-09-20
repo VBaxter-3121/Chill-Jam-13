@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.InputSystem;
+using UnityEngine.InputSystem.Processors;
 
 public class CactusControl : MonoBehaviour
 {
@@ -11,15 +12,26 @@ public class CactusControl : MonoBehaviour
 
     private Vector2 moveDirection;
     private float baseSpeed;
+    private bool free;
+    Collision2D currectCollider;
 
     private void Start()
     {
         baseSpeed = moveSpeed;
+        free = true;
     }
 
     private void FixedUpdate()
     {
-        rb.AddForce(moveDirection * moveSpeed);
+        if (free)
+        {
+            moveDirection.y = 0;
+        }
+        else
+        {
+            moveDirection += currectCollider.GetContact(0).normal * -0.05f;
+        }
+            rb.AddForce(moveDirection * moveSpeed);
     }
 
     public void RetractSpines(InputAction.CallbackContext context)
@@ -41,17 +53,20 @@ public class CactusControl : MonoBehaviour
         moveDirection = context.ReadValue<Vector2>();
     }
 
-    public void ToggleSpeed(bool isFree)
+    public void ToggleSpeed(bool isFree, Collision2D collider)
     {
-        if (!isFree)
+        free = isFree;
+        if (!free)
         {
             moveSpeed = baseSpeed * 0.5f;
             rb.gravityScale = 0.25f;
+            currectCollider = collider;
         }
         else
         {
             moveSpeed = baseSpeed;
             rb.gravityScale = 1;
+            currectCollider = null;
         }
     }
 }

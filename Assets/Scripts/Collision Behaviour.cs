@@ -52,7 +52,7 @@ public class CollisionBehaviour : MonoBehaviour
                 endKnot = splineContainer.Spline[splineContainer.Spline.Count - 1];
                 GetComponent<Rigidbody2D>().velocity = Vector2.zero;
                 freeMovement = false;
-                this.GetComponent<CactusControl>().ToggleSpeed(freeMovement);
+                this.GetComponent<CactusControl>().ToggleSpeed(freeMovement, collision);
             }
         }
         else
@@ -79,7 +79,7 @@ public class CollisionBehaviour : MonoBehaviour
             endKnot = splineContainer.Spline[splineContainer.Spline.Count - 1];
             GetComponent<Rigidbody2D>().velocity = Vector2.zero;
             freeMovement = false;
-            this.GetComponent<CactusControl>().ToggleSpeed(freeMovement);
+            this.GetComponent<CactusControl>().ToggleSpeed(freeMovement, collision);
         }
     }
 
@@ -91,7 +91,7 @@ public class CollisionBehaviour : MonoBehaviour
     public void Release()
     {
         freeMovement = true;
-        this.GetComponent<CactusControl>().ToggleSpeed(freeMovement);
+        this.GetComponent<CactusControl>().ToggleSpeed(freeMovement, null);
         splineContainer = null;
     }
 
