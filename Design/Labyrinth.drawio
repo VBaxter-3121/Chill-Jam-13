@@ -1,0 +1,120 @@
+<mxfile host="app.diagrams.net" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/141.0.0.0 Safari/537.36" version="28.2.9">
+  <diagram name="Page-1" id="lSGmdr0srLuCwNsoyXNC">
+    <mxGraphModel dx="1426" dy="743" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="0" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="Z2JnzK4ls1dd0CcRtyJj-2" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" parent="1" source="Z2JnzK4ls1dd0CcRtyJj-1" target="Z2JnzK4ls1dd0CcRtyJj-15" edge="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="420" y="150" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="Z2JnzK4ls1dd0CcRtyJj-1" value="Level Generation Start" style="ellipse;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="360" y="40" width="120" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="Z2JnzK4ls1dd0CcRtyJj-10" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" parent="1" source="Z2JnzK4ls1dd0CcRtyJj-3" target="Z2JnzK4ls1dd0CcRtyJj-11" edge="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="420" y="410" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="Z2JnzK4ls1dd0CcRtyJj-3" value="Create first room at centre coordinates" style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="360" y="290" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="Z2JnzK4ls1dd0CcRtyJj-14" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" parent="1" source="Z2JnzK4ls1dd0CcRtyJj-9" target="Z2JnzK4ls1dd0CcRtyJj-13" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="Z2JnzK4ls1dd0CcRtyJj-9" value="For each open path" style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="360" y="530" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="Z2JnzK4ls1dd0CcRtyJj-12" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" parent="1" source="Z2JnzK4ls1dd0CcRtyJj-11" target="Z2JnzK4ls1dd0CcRtyJj-9" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="Z2JnzK4ls1dd0CcRtyJj-11" value="Record room data" style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="360" y="410" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="dwH2z_Z3KFOzwlvCLLb8-2" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="Z2JnzK4ls1dd0CcRtyJj-13" target="dwH2z_Z3KFOzwlvCLLb8-1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="Z2JnzK4ls1dd0CcRtyJj-13" value="While room not confirmed" style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="520" y="530" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="Z2JnzK4ls1dd0CcRtyJj-17" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" parent="1" source="Z2JnzK4ls1dd0CcRtyJj-15" target="Z2JnzK4ls1dd0CcRtyJj-16" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="Z2JnzK4ls1dd0CcRtyJj-18" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" parent="1" source="Z2JnzK4ls1dd0CcRtyJj-15" target="Z2JnzK4ls1dd0CcRtyJj-3" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="Z2JnzK4ls1dd0CcRtyJj-15" value="Create map data structure" style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="360" y="170" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="Z2JnzK4ls1dd0CcRtyJj-16" value="Occupied coordinates&lt;div&gt;Open paths&lt;/div&gt;" style="rounded=1;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="520" y="172.19" width="120" height="55.62" as="geometry" />
+        </mxCell>
+        <mxCell id="dwH2z_Z3KFOzwlvCLLb8-4" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="dwH2z_Z3KFOzwlvCLLb8-1" target="dwH2z_Z3KFOzwlvCLLb8-5">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="740" y="650" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="dwH2z_Z3KFOzwlvCLLb8-1" value="Select room template" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="680" y="530" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="dwH2z_Z3KFOzwlvCLLb8-8" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="dwH2z_Z3KFOzwlvCLLb8-5" target="dwH2z_Z3KFOzwlvCLLb8-7">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="dwH2z_Z3KFOzwlvCLLb8-16" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0;exitY=0.5;exitDx=0;exitDy=0;entryX=0.5;entryY=1;entryDx=0;entryDy=0;" edge="1" parent="1" source="dwH2z_Z3KFOzwlvCLLb8-5" target="Z2JnzK4ls1dd0CcRtyJj-13">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="dwH2z_Z3KFOzwlvCLLb8-18" value="Room can&#39;t fit" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="dwH2z_Z3KFOzwlvCLLb8-16">
+          <mxGeometry x="-0.2526" y="1" relative="1" as="geometry">
+            <mxPoint x="5" y="-10" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="dwH2z_Z3KFOzwlvCLLb8-5" value="While orientations not exhausted" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="680" y="650" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="dwH2z_Z3KFOzwlvCLLb8-10" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="dwH2z_Z3KFOzwlvCLLb8-7" target="dwH2z_Z3KFOzwlvCLLb8-11">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="900" y="770" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="dwH2z_Z3KFOzwlvCLLb8-7" value="Align an open path on new room with current room" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="840" y="650" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="dwH2z_Z3KFOzwlvCLLb8-13" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0;exitY=0.5;exitDx=0;exitDy=0;entryX=0.5;entryY=1;entryDx=0;entryDy=0;" edge="1" parent="1" source="dwH2z_Z3KFOzwlvCLLb8-11" target="dwH2z_Z3KFOzwlvCLLb8-5">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="dwH2z_Z3KFOzwlvCLLb8-15" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="dwH2z_Z3KFOzwlvCLLb8-11" target="dwH2z_Z3KFOzwlvCLLb8-14">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="dwH2z_Z3KFOzwlvCLLb8-11" value="Any collisions?" style="rhombus;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="840" y="760" width="120" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="dwH2z_Z3KFOzwlvCLLb8-22" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="dwH2z_Z3KFOzwlvCLLb8-14" target="dwH2z_Z3KFOzwlvCLLb8-21">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="dwH2z_Z3KFOzwlvCLLb8-14" value="Confirm room placement" style="whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="840" y="890" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="dwH2z_Z3KFOzwlvCLLb8-19" value="Yes" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="1">
+          <mxGeometry x="770" y="760" as="geometry">
+            <mxPoint x="58" y="29" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="dwH2z_Z3KFOzwlvCLLb8-20" value="No" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="1">
+          <mxGeometry x="830" y="820" as="geometry">
+            <mxPoint x="58" y="29" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="dwH2z_Z3KFOzwlvCLLb8-25" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="dwH2z_Z3KFOzwlvCLLb8-21" target="dwH2z_Z3KFOzwlvCLLb8-23">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="dwH2z_Z3KFOzwlvCLLb8-21" value="Determine open and closed paths" style="whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="840" y="1010" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="dwH2z_Z3KFOzwlvCLLb8-23" value="Match all adjacent open or closed paths&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;Randomise adjacent empty cells&lt;/div&gt;" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="1000" y="1001.09" width="120" height="77.81" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
